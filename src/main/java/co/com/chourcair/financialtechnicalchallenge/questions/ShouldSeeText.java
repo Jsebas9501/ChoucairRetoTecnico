@@ -24,6 +24,7 @@ public class ShouldSeeText implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
         String textConfirm = Text.of(UtestPage.TEXT_CONFIRM).viewedBy(actor).asString();
         Boolean resp = false;
+
         if (textConfirm == text){
             resp = true;
         }
